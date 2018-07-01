@@ -7,16 +7,27 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/numChildren"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/accText"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Accelerometer Data"/>
 
-    <android.app.MediaRouteButton
+    <com.tjik.myshakedemo.CustomView
+        android:id="@+id/xyzView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/accText"/>
+
+    <TextView
+        android:id="@+id/numChildren"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/xyzView"
+        android:gravity="center" />
+
+    <android.widget.Button
         android:id="@+id/shakingBtn"
         android:layout_width="300dp"
         android:layout_height="100dp"
